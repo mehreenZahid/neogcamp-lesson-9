@@ -7,4 +7,15 @@ function reverseStr(str){
     return reverseStr;
 }
 
-console.log(reverseStr("hello"));
+function isPalindrome(str){
+    var reverse = reverseStr(str);
+
+    if(str === reverse){
+        return true;
+    }
+    return false;
+}
+
+console.log(isPalindrome('242'));
+console.log(isPalindrome('oppo'));
+console.log(isPalindrome('racecar'));
