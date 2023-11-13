@@ -19,3 +19,4 @@ function isPalindrome(str){
 console.log(isPalindrome('242'));
 console.log(isPalindrome('oppo'));
 console.log(isPalindrome('racecar'));
+console.log(isPalindrome('momo'));
