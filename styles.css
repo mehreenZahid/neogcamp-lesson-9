@@ -1,3 +1,23 @@
+body{
+    background-color: rgb(169, 253, 208);
+}
+
 main{
-    margin: auto;
+    text-align: center;
+}
+
+p{
+    padding: 20px;
+    font-size: 19px;
+}
+
+input{
+    padding: 7px;
+    background-color: rgb(113, 158, 255);
+}
+
+button{
+    padding: 8px;
+    background-color: rgb(49, 112, 246);
+    color: white;
 }
