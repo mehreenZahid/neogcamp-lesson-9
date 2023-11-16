@@ -141,3 +141,34 @@ function checkPalindromeForAllDateFormats(date) {
 
     return checkIsPalindrome
 }
+
+
+var dateInputRef = document.querySelector("#bday-input")
+var checkBtnRef = document.querySelector("#check-btn")
+var Resultref = document.querySelector("#result")
+
+function clickHandler(e){
+    bdayStr = dateInputRef.value
+
+    if(bdayStr !== ''){
+        var listOfDate = bdayStr.split('-')
+        var date = {
+            day: Number(listOfDate[2]),
+            month: Number(listOfDate[1]),
+            year: Number(listOfDate[0])
+        }
+        
+
+        var isPalindrome = checkPalindromeForAllDateFormats(date)
+        
+        if(isPalindrome){
+            Resultref.innerText = "Yay! Your birthday is a palindrome! 🥳"
+        }
+        else{
+            var [ctr, nextDate] = getNextPalindromeDate(date)
+            Resultref.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days! 😞`
+        }
+    }
+}
+
+checkBtnRef.addEventListener('click', clickHandler)
